@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import picture from "../../../images/banner/picture.jpg";
 const Banner = () => {
   return (
@@ -10,7 +11,7 @@ const Banner = () => {
           alt=""
         />
         <div className="m-10 text-left">
-          <h1 class="text-5xl font-bold">Shoriful Habib</h1>
+          <h1 class="text-5xl font-bold ">Shoriful Habib</h1>
           <p className="py-1">Front-end Web Developer</p>
           <p class="py-6">
             A self-motivated, ambitious and enthusiastic web designer and
@@ -20,8 +21,14 @@ const Banner = () => {
             local and multinational Software/IT agency of Bangladesh and grow
             rapidly with increasing skills and responsibilities.
           </p>
-          <button class="btn btn-sm">Download Resume</button>
-          <button class="btn btn-sm bg-[#44A076] ml-3">My Projects</button>
+          <button class="btn btn-sm ">
+            <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
+              Download Resume
+            </a>
+          </button>
+          <Link to={"/projects"}>
+            <button class="btn btn-sm bg-[#44A076] ml-3">My Projects</button>
+          </Link>
         </div>
       </div>
     </div>
