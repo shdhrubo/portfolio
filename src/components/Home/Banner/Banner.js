@@ -21,13 +21,15 @@ const Banner = () => {
             local and multinational Software/IT agency of Bangladesh and grow
             rapidly with increasing skills and responsibilities.
           </p>
-          <button class="btn btn-sm ">
+          <button class="btn btn-sm mt-1">
             <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
               Download Resume
             </a>
           </button>
           <Link to={"/projects"}>
-            <button class="btn btn-sm bg-[#44A076] ml-3">My Projects</button>
+            <button class="btn btn-sm bg-[#44A076] lg:ml-3 mt-1">
+              My Projects
+            </button>
           </Link>
         </div>
       </div>

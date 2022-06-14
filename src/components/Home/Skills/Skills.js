@@ -2,9 +2,9 @@ import React from "react";
 import js from "../../../images/skills/js.png";
 import react from "../../../images/skills/react.png";
 import backend from "../../../images/skills/backend.png";
-import html from "../../../images/skills/html.jpg";
+import html from "../../../images/skills/html.png";
 import css from "../../../images/skills/css.png";
-import tools from "../../../images/skills/tools.jpg";
+import tools from "../../../images/skills/tools.png";
 
 const Skills = () => {
   return (
