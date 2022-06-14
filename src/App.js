@@ -1,11 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
 import Projects from "./components/Projects/Projects";
 import ProjectsDetails from "./components/Projects/ProjectsDetails";
+import React from 'react';
 
+  import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
         <Route path="/projects" element={<Projects></Projects>}></Route>
         <Route path="/projects/:id" element={<ProjectsDetails></ProjectsDetails>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

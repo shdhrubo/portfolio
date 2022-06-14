@@ -5,7 +5,6 @@ import useProjects from "../hooks/useProjects";
 const Projects = () => {
   const [projects] = useProjects([]);
   console.log(projects);
-  //   const [title, description, tools] = projects;
   return (
     <div className="bg-[#10121B]">
       <h3 className="text-2xl font-bold inline-block text-[#44A076] border-b-4 border-[#44A076] mt-8 mb-6">
