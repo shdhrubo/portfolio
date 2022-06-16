@@ -11,6 +11,12 @@ const Header = () => {
         <a href="#skills">Skills</a>
       </li>
       <li>
+        <Link to={"/about"}>About Me</Link>
+      </li>
+      <li>
+        <Link to={"/blogs"}>Blogs</Link>
+      </li>
+      <li>
         <button className="btn capitalize  bg-[#44A076]">
           {" "}
           <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
@@ -18,7 +24,6 @@ const Header = () => {
           </a>
         </button>
       </li>
-     
     </>
   );
   return (
@@ -55,7 +60,7 @@ const Header = () => {
           SHORIFUL
         </Link>
       </div>
-      <div class="navbar-center hidden lg:flex">
+      <div class=" navbar-center  hidden lg:flex ">
         <ul class="menu menu-horizontal p-0 font-bold">{menuItems}</ul>
       </div>
       <div class="navbar-end"></div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useProjects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/projects")
+    fetch("https://limitless-atoll-67186.herokuapp.com/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
