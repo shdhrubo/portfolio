@@ -8,7 +8,7 @@ import tools from "../../../images/skills/tools.png";
 
 const Skills = () => {
   return (
-    <div className="bg-[#10121B]">
+    <div className="bg-[#10121B]" id="skills">
       <h4 className="text-2xl font-bold inline-block text-[#44A076] border-b-4 border-[#44A076] mt-8 mb-6">
         Skills
       </h4>

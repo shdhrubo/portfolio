@@ -8,6 +8,9 @@ const Header = () => {
         <Link to={"/projects"}>Projects</Link>
       </li>
       <li>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
         <button className="btn capitalize  bg-[#44A076]">
           {" "}
           <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
@@ -15,6 +18,7 @@ const Header = () => {
           </a>
         </button>
       </li>
+     
     </>
   );
   return (

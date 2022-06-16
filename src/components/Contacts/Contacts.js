@@ -18,6 +18,7 @@ const Contacts = () => {
         (result) => {
           console.log(result.text);
           toast("Email received!");
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
@@ -25,7 +26,7 @@ const Contacts = () => {
       );
   };
   return (
-    <div className="  bg-[#10121B] ">
+    <div className="  bg-[#10121B] pb-10">
       <h3 className="text-2xl text-[#44A076] border-b-4 border-[#44A076] inline-block mt-20 mb-4">
         Contact Me
       </h3>
@@ -60,7 +61,12 @@ const Contacts = () => {
           </div>
           <h4 className="text-xl text-white">
             Send message to{" "}
-            <a href="mailto:shorifulhabib.iit@gmail.com" className="text-[#44A076]">sorifulhabib.iit@gmail.com</a>
+            <a
+              href="mailto:shorifulhabib.iit@gmail.com"
+              className="text-[#44A076]"
+            >
+              shorifulhabib.iit@gmail.com
+            </a>
           </h4>
           <button className="btn btn-sm bg-[#44A076] mt-3">
             {" "}
