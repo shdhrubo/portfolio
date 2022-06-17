@@ -11,8 +11,8 @@ const About = () => {
       <h3 className="text-2xl font-bold inline-block text-[#44A076] border-b-4 border-[#44A076] mt-8 mb-6 ">
         About Me
       </h3>
-      <div className=" bg-[#1E2A3A] mx-10">
-        <div className="grid  lg:grid-cols-2 md:grid-cols-2 gap-10 mt-5 pt-5 px-8">
+      <div className=" bg-[#1E2A3A] lg:mx-10 md:mx-1">
+        <div className="grid  lg:grid-cols-2 md:grid-cols-2 sm-grid-cols-1 gap-5 mt-5 pt-5 px-8">
           <div className="text-white text-left">
             <h1 class="text-5xl font-bold ">Shoriful Habib</h1>
             <p className="py-1">Front-end Web Developer</p>
@@ -45,8 +45,8 @@ const About = () => {
 
         <div class="hero min-h-screen ">
           <div class="hero-content flex-col lg:flex-row-reverse items-center lg:px-20">
-            <div>
-              <p class=" text-gray-400 text-left">
+            <div className="w-auto">
+              <p class=" text-gray-400 text-left w-full">
                 A self-motivated, ambitious and enthusiastic web designer and
                 developer with highly interested in JavaScript, HTML5, CSS3, and
                 front-end web development with modern web tech like React.js. To
