@@ -43,8 +43,8 @@ const About = () => {
           </div>
         </div>
 
-        <div class="hero min-h-screen px-10">
-          <div class="hero-content flex-col lg:flex-row-reverse items-center">
+        <div class="hero min-h-screen ">
+          <div class="hero-content flex-col lg:flex-row-reverse items-center lg:px-20">
             <div>
               <p class=" text-gray-400 text-left">
                 A self-motivated, ambitious and enthusiastic web designer and
@@ -56,15 +56,15 @@ const About = () => {
                 responsibilities.
               </p>
               <button class="btn btn-sm mt-3">
-            <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
-              Download Resume
-            </a>
-          </button>
-          <Link to={"/projects"}>
-            <button class="btn btn-sm bg-[#44A076] lg:ml-3 mt-1">
-              My Projects
-            </button>
-          </Link>
+                <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
+                  Download Resume
+                </a>
+              </button>
+              <Link to={"/projects"}>
+                <button class="btn btn-sm bg-[#44A076] ml-3 mt-1">
+                  My Projects
+                </button>
+              </Link>
             </div>
             <img src={img} class="max-w-sm rounded-lg " />
           </div>

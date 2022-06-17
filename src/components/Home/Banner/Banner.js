@@ -30,7 +30,7 @@ const Banner = () => {
             </a>
           </button>
           <Link to={"/projects"}>
-            <button class="btn btn-sm bg-[#44A076] lg:ml-3 mt-1">
+            <button class="btn btn-sm bg-[#44A076] ml-3 mt-1">
               My Projects
             </button>
           </Link>
