@@ -53,23 +53,19 @@ const ProjectsDetails = () => {
           <div className="mt-3">
             <h4 className="text-left text-gray-400">Links:</h4>
             <div className="mt-3 text-left">
-              <a
-                href={projectDetails?.frontEnd}
-                target="_blank"
-                
-              >
+              <a href={projectDetails?.frontEnd} target="_blank">
                 {" "}
                 <button className="btn btn-sm mt-1">Front-end Repo</button>
               </a>
-              <a
-                href={projectDetails?.backEnd}
-                target="_blank"
-               
-              >
-                {" "}
-                <button className="btn btn-sm mt-1">Back-end Repo</button>
-              </a>
-              <a href={projectDetails?.live} target="_blank" >
+              {projectDetails?.backEnd !== null ? (
+                <a href={projectDetails?.backEnd} target="_blank">
+                  {" "}
+                  <button className="btn btn-sm mt-1">Back-end Repo</button>
+                </a>
+              ) : (
+                ""
+              )}
+              <a href={projectDetails?.live} target="_blank">
                 {" "}
                 <button className="btn btn-sm mt-1">Live Site</button>
               </a>

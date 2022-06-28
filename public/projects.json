@@ -56,7 +56,45 @@
       "Firebase"
     ],
     "frontEnd": "https://github.com/shdhrubo/visa-consultant",
-    "backEnd": "",
+    "backEnd": null,
     "live": "https://visa-consultant-50b18.web.app/"
+  },
+  {
+    "serial": "04",
+    "title": "Phone Hunter",
+    "img1": "https://i.ibb.co/Wx9ZFwv/2022-06-17-204001.jpg",
+    "img2": "https://i.ibb.co/7JMnw2T/2022-06-17-204019.jpg",
+    "img3": "https://i.ibb.co/sV2zmQb/2022-06-17-204031.jpg",
+
+    "description": "A simple application with api call.Users can search their phone by company and get different model's phones.User can see the details of a phone by clicking details button.Users will see in the ui only 20 items.If there is more they can see by click see more button",
+    "tools": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Js",
+      "API",
+      "DOM"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/phone-hunter",
+    "backEnd": null,
+    "live": "https://phone-hub-shd.netlify.app/"
+  },
+  {
+    "serial": "05",
+    "title": "Money Master",
+    "img1": "https://i.ibb.co/MM5XjQc/2022-06-17-205557.jpg",
+    "img2": "https://i.ibb.co/2cTcztM/2022-06-17-205618.jpg",
+    "img3": "https://i.ibb.co/jHVBRPP/2022-06-17-205625.jpg",
+
+    "description": "Javascript simple project where user can calculate their monthly money costing and savings.There are 1 field that is income and 3 fields that are expensives fields.Users can calculate the saving money of their monthly income and expenses.",
+    "tools": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Js"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/money-master.git",
+    "backEnd": null,
+    "live": "https://money-master-shd1.netlify.app/"
   }
 ]
