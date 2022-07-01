@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useProjects from "../../hooks/useProjects";
 
 const HomeProjects = () => {
-  const [projects] = useProjects([]);
+  const [projects, , loading] = useProjects([]);
   const homeProjects = projects.slice(0, 3);
   console.log(homeProjects);
   return (
@@ -12,26 +12,37 @@ const HomeProjects = () => {
         My projects
       </h3>
 
-      <div className="grid  lg:grid-cols-2  gap-8 mx-10">
-        {homeProjects.map((project) => (
-          <div className="w-full ">
-            <div class="card w-full bg-[#1E2A3A] text-white shadow-xl p-0">
-              <img src={project.img1} alt="" className="w-auto " />
-              <div class="card-body text-left">
-                <h2 class="card-title text-[#44A076]">{project.serial}</h2>
-                <h2 class="card-title">{project.title}</h2>
-                <p>{project.description}</p>
-                <Link className="mx-auto" to={`/projects/${project._id} `}>
-                  {" "}
-                  <button className="btn btn-sm w-52  bg-[#44A076]">
-                    Details
-                  </button>
-                </Link>
+      {loading ? (
+        <>
+          <p style={{ color: "#fff" }}>
+            <i className="bx bx-loader bx-spin"></i> Loading...
+          </p>
+        </>
+      ) : (
+        <>
+          <div className="grid  lg:grid-cols-2  gap-8 mx-10">
+            {homeProjects.map((project) => (
+              <div className="w-full ">
+                <div class="card w-full bg-[#1E2A3A] text-white shadow-xl p-0">
+                  <img src={project.img1} alt="" className="w-auto " />
+                  <div class="card-body text-left">
+                    <h2 class="card-title text-[#44A076]">{project.serial}</h2>
+                    <h2 class="card-title">{project.title}</h2>
+                    <p>{project.description}</p>
+                    <Link className="mx-auto" to={`/projects/${project._id} `}>
+                      {" "}
+                      <button className="btn btn-sm w-52  bg-[#44A076]">
+                        Details
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
+
       <Link to={"/projects"}>
         {" "}
         <button className="btn btn-sm  mt-3 bg-[#44A076]">See All</button>
