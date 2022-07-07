@@ -19,7 +19,7 @@ const Header = () => {
       <li>
         <button className="btn capitalize  bg-[#44A076]">
           {" "}
-          <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
+          <a href="https://docs.google.com/uc?export=download&id=1YkmMD_mOQWG-fF8NOsPj9vq4eVUfkKTj">
             Download Resume
           </a>
         </button>
