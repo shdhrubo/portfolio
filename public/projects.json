@@ -1,0 +1,100 @@
+[
+  {
+    "serial": "01",
+    "title": "Solver",
+    "img1": "https://i.ibb.co/0ncK4Fn/2022-06-14-092145.jpg",
+    "img2": "https://i.ibb.co/rMC9fKG/2022-06-15-191340.jpg",
+    "img3": "https://i.ibb.co/Lr58tH0/2022-06-15-191226.jpg",
+    "description": "This is a manufacturer website where users can buy manufacturer items by paying using card.Users can see their products and can give a review.An admin can manage products.Admin can make another person admin",
+    "tools": [
+      "ReactJs",
+      "NodeJs",
+      "ExpressJs",
+      "MongoDB",
+      "Tailwind CSS",
+      "Firebase",
+      "StripeJs"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/manufacturer-client",
+    "backEnd": "https://github.com/shdhrubo/manufacturer-server",
+    "live": "https://manufacturer-website-1234.web.app/"
+  },
+  {
+    "serial": "02",
+    "title": "EIMS",
+    "img1": "https://i.ibb.co/J29fNcc/2022-06-14-092229.jpg",
+    "img2": "https://i.ibb.co/DQWD018/2022-06-15-191727.jpg",
+    "img3": "https://i.ibb.co/74c4wm3/2022-06-15-191744.jpg",
+
+    "description": "This is a inventory website where users can manage their invenory items.Users can add new items,item's quantity and can sell items.If there is no items left,user will see sold alert.User can delete their items as well.",
+    "tools": [
+      "ReactJs",
+      "NodeJs",
+      "ExpressJs",
+      "MongoDB",
+      "Bootstrap ",
+      "Firebase"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/ware-house-cllient",
+    "backEnd": "https://github.com/shdhrubo/ware-house-server",
+    "live": "https://inventory-management-b4678.web.app/"
+  },
+  {
+    "serial": "03",
+    "title": "Visa Consultant",
+    "img1": "https://i.ibb.co/GvR6fPk/2022-06-14-092244.jpg",
+    "img2": "https://i.ibb.co/Ms1WhfC/2022-06-15-191853.jpg",
+    "img3": "https://i.ibb.co/FYZcdvq/2022-06-15-191843.jpg",
+
+    "description": "A simple react app  where users can buy explore the services provide by a visa consultant. Users can be able to book their favorite services like student visa,immigration visa etc.Users can explore reviews of others users who already bought services.",
+    "tools": [
+      "HTML",
+      "CSS",
+      "ReactJs",
+      "Bootstrap",
+      "React-bootstrap",
+      "Firebase"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/visa-consultant",
+    "backEnd": "",
+    "live": "https://visa-consultant-50b18.web.app/"
+  },
+  {
+    "serial": "04",
+    "title": "Phone Hunter",
+    "img1": "https://i.ibb.co/Wx9ZFwv/2022-06-17-204001.jpg",
+    "img2": "https://i.ibb.co/7JMnw2T/2022-06-17-204019.jpg",
+    "img3": "https://i.ibb.co/sV2zmQb/2022-06-17-204031.jpg",
+
+    "description": "A simple application with api call.Users can search their phone by company and get different model's phones.User can see the details of a phone by clicking details button.Users will see in the ui only 20 items.If there is more they can see by click see more button",
+    "tools": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Js",
+      "API",
+      "DOM"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/phone-hunter",
+    "backEnd": "",
+    "live": "https://phone-hub-shd.netlify.app/"
+  },
+  {
+    "serial": "05",
+    "title": "Money Master",
+    "img1": "https://i.ibb.co/MM5XjQc/2022-06-17-205557.jpg",
+    "img2": "https://i.ibb.co/2cTcztM/2022-06-17-205618.jpg",
+    "img3": "https://i.ibb.co/jHVBRPP/2022-06-17-205625.jpg",
+
+    "description": "Javascript simple project where user can calculate their monthly money costing and savings.There are 1 field that is income and 3 fields that are expensives fields.Users can calculate the saving money of their monthly income and expenses.",
+    "tools": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Js"
+    ],
+    "frontEnd": "https://github.com/shdhrubo/money-master.git",
+    "backEnd": "",
+    "live": "https://money-master-shd1.netlify.app/"
+  }
+]
