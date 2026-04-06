@@ -7,18 +7,17 @@ const Projects = () => {
   const [projects] = useProjects();
 
   return (
-    <div className="bg-[#10121B] pb-24 w-full min-h-screen">
+    <div className="bg-[#10121B] pb-24 w-full min-h-screen  pt-20">
       <div className="max-w-[1200px] mx-auto w-full px-4">
-        
         <div className="text-left mb-16 pt-12">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold text-white mb-4"
           >
             All <span className="text-[#44A076]">Projects</span>
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
             whileInView={{ opacity: 1, scaleX: 1 }}
             className="h-1 w-16 bg-[#44A076] rounded-full origin-left"
@@ -27,21 +26,21 @@ const Projects = () => {
 
         <div className="flex flex-col gap-12 lg:gap-16 items-center">
           {projects.map((project, index) => (
-            <motion.div 
+            <motion.div
               key={project._id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className={`flex flex-col lg:flex-row items-stretch bg-[#1E2A3A]/40 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden hover:border-[#44A076]/50 transition-all duration-500 shadow-xl group w-full ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+              className={`flex flex-col lg:flex-row items-stretch bg-[#1E2A3A]/40 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden hover:border-[#44A076]/50 transition-all duration-500 shadow-xl group w-full ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               {/* Project Image */}
               <div className="lg:w-1/2 w-full h-64 lg:h-auto min-h-[300px] overflow-hidden relative">
                 <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
-                <img 
-                  src={project.img1} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                <img
+                  src={project.img1}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
 
@@ -57,7 +56,10 @@ const Projects = () => {
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-8 mt-auto">
                   {project.technologies?.map((tech, i) => (
-                    <span key={i} className="px-3 py-1.5 bg-[#10121B] text-[#44A076] text-xs font-semibold rounded-md border border-[#44A076]/30">
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 bg-[#10121B] text-[#44A076] text-xs font-semibold rounded-md border border-[#44A076]/30"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -70,7 +72,12 @@ const Projects = () => {
                       View Details
                     </button>
                   </Link>
-                  <a href={project.live} target="_blank" rel="noreferrer" className="px-8 py-3 bg-transparent border-2 border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-8 py-3 bg-transparent border-2 border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300"
+                  >
                     Live Demo
                   </a>
                 </div>
@@ -78,7 +85,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </div>
   );

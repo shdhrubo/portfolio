@@ -18,8 +18,8 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-[#10121B] text-white min-h-screen pb-20 w-full overflow-hidden">
-      <div className="max-w-[1200px] mx-auto w-full px-4 pt-12">
+    <div className="bg-[#10121B] text-white min-h-screen pb-20 w-full overflow-hidden pt-20">
+      <div className="max-w-[1200px] mx-auto w-full px-4">
         {/* Section Header */}
         <div className="text-left mb-16 pt-12">
           <motion.h2
@@ -122,16 +122,15 @@ const About = () => {
           >
             <div>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                <span className="w-8 h-1 bg-[#44A076] rounded-full inline-block"></span>
                 Professional Summary
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6 italic">
-                "Full-Stack Software Engineer with 2 years of experience in
+              <p className="text-left text-gray-400 text-lg leading-relaxed mb-6 italic">
+                Full-Stack Software Engineer with 2 years of experience in
                 building scalable applications using Angular, .NET, Node.js and
                 MongoDB. Skilled in AI and agent-assisted software development
-                and familiar with CQRS, Microservices, and DDD."
+                and familiar with CQRS, Microservices, and DDD.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-left text-gray-400 text-lg leading-relaxed">
                 I specialize in developing high-performance systems and
                 optimizing workflows. Currently, as a Software Engineer at{" "}
                 <strong>BRAC IT Services Limited</strong>, I design and develop
@@ -178,7 +177,7 @@ const About = () => {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A2235] border border-gray-700 hover:border-[#44A076] text-white font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <FontAwesomeIcon icon={faProjectDiagram} />
-                View Portfolio
+                View Projects
               </Link>
             </div>
           </motion.div>

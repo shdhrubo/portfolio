@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Blogs from "./components/Blogs/Blogs";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/projects" element={<Projects></Projects>}></Route>
+        <Route path="/skills" element={<Skills></Skills>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
