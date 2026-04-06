@@ -8,7 +8,7 @@ import img from "../../../images/banner/profile.jpg";
 
 const Banner = () => {
   return (
-    <div className="hero py-20 lg:py-48 bg-[#10121B] text-white lg:px-10 overflow-hidden relative">
+    <div className="hero py-20 lg:py-48 bg-theme-primary text-theme-primary lg:px-10 overflow-hidden relative">
       {/* Background glowing effects */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#44A076] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"></div>
       <div
@@ -37,10 +37,10 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-theme-primary">
               Shoriful Habib
             </h1>
-            <p className="text-xl md:text-2xl font-semibold mb-2 text-gray-300">
+            <p className="text-xl md:text-2xl font-semibold mb-2 text-theme-secondary">
               Full-Stack Software Engineer
             </p>
           </motion.div>
@@ -49,7 +49,7 @@ const Banner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="py-4 text-base text-gray-400 leading-relaxed max-w-xl"
+            className="py-4 text-base text-theme-secondary leading-relaxed max-w-xl"
           >
             With 2 years of experience building scalable applications, I
             specialize in{" "}
@@ -101,11 +101,11 @@ const Banner = () => {
               href="https://www.linkedin.com/in/shorifulhabib/"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+              className="text-theme-muted hover:text-[#0077B5] transition-all duration-300 flex items-center gap-2 group transform hover:scale-105"
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-xl group-hover:text-[#0077B5] transition-colors"
+                className="text-xl transition-colors"
               />
               <span className="text-sm font-medium">LinkedIn</span>
             </a>
@@ -113,11 +113,11 @@ const Banner = () => {
               href="https://github.com/shdhrubo"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+              className="text-theme-muted hover:text-[#44A076] transition-all duration-300 flex items-center gap-2 group transform hover:scale-105"
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                className="text-xl group-hover:text-white transition-colors"
+                className="text-xl transition-colors"
               />
               <span className="text-sm font-medium">GitHub</span>
             </a>
@@ -125,11 +125,11 @@ const Banner = () => {
               href="https://leetcode.com/u/user9074Cq/"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+              className="text-theme-muted hover:text-[#FFA116] transition-all duration-300 flex items-center gap-2 group transform hover:scale-105"
             >
               <FontAwesomeIcon
                 icon={faCode}
-                className="text-xl group-hover:text-[#FFA116] transition-colors"
+                className="text-xl transition-colors"
               />
               <span className="text-sm font-medium">LeetCode</span>
             </a>

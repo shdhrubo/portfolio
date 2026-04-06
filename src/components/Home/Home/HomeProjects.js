@@ -8,7 +8,7 @@ const HomeProjects = () => {
   const homeProjects = projects.slice(0, 2);
 
   return (
-    <div className="bg-[#10121B] w-full py-20" id="projects">
+    <div className="bg-theme-primary w-full py-20" id="projects">
       <div className="max-w-[1200px] mx-auto w-full px-4">
         
         <div className="text-left mb-16">
@@ -16,7 +16,7 @@ const HomeProjects = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-theme-primary mb-4"
           >
             Featured <span className="text-[#44A076]">Projects</span>
           </motion.h2>
@@ -36,7 +36,7 @@ const HomeProjects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className={`flex flex-col lg:flex-row items-stretch bg-[#1E2A3A]/40 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden hover:border-[#44A076]/50 transition-all duration-500 shadow-xl group w-full ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+              className={`flex flex-col lg:flex-row items-stretch bg-theme-sec-alpha backdrop-blur-sm border border-theme rounded-3xl overflow-hidden hover:border-[#44A076]/50 transition-all duration-500 shadow-xl group w-full ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
             >
               {/* Project Image */}
               <div className="lg:w-1/2 w-full h-64 lg:h-auto min-h-[300px] overflow-hidden relative">
@@ -49,18 +49,18 @@ const HomeProjects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="lg:w-1/2 w-full p-8 lg:p-12 text-left flex flex-col justify-center bg-[#1A2235]/60 z-20">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#44A076] transition-colors duration-300">
+              <div className="lg:w-1/2 w-full p-8 lg:p-12 text-left flex flex-col justify-center bg-theme-card-60 z-20">
+                <h3 className="text-2xl md:text-3xl font-bold text-theme-primary mb-4 group-hover:text-[#44A076] transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+                <p className="text-theme-secondary text-sm md:text-base leading-relaxed mb-8">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-8 mt-auto">
                   {project.technologies?.map((tech, i) => (
-                    <span key={i} className="px-3 py-1.5 bg-[#10121B] text-[#44A076] text-xs font-semibold rounded-md border border-[#44A076]/30">
+                    <span key={i} className="px-3 py-1.5 bg-theme-primary text-[#44A076] text-xs font-semibold rounded-md border border-[#44A076]/30">
                       {tech}
                     </span>
                   ))}
@@ -73,7 +73,7 @@ const HomeProjects = () => {
                       View Details
                     </button>
                   </Link>
-                  <a href={project.live} target="_blank" rel="noreferrer" className="px-8 py-3 bg-transparent border-2 border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300">
+                  <a href={project.live} target="_blank" rel="noreferrer" className="px-8 py-3 bg-transparent border-2 border-theme hover:border-[#44A076] text-theme-secondary hover:text-[#44A076] font-semibold rounded-lg transition-all duration-300">
                     Live Demo
                   </a>
                 </div>

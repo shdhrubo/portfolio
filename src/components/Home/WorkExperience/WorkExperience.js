@@ -15,7 +15,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <div className="bg-[#10121B] py-24 w-full" id="experience">
+    <div className="bg-theme-primary py-24 w-full" id="experience">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Left-Aligned Section Title */}
         <div className="text-left mb-16">
@@ -23,7 +23,7 @@ const WorkExperience = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-theme-primary mb-4"
           >
             Work <span className="text-[#44A076]">Experience</span>
           </motion.h2>
@@ -43,7 +43,7 @@ const WorkExperience = () => {
             {/* 2. Perfectly Balanced Company Header */}
             <div className="relative z-10 flex items-center gap-4 md:gap-6 mb-10 -ml-1">
               {/* Briefcase Icon (Centered on Line) */}
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1A2235] border-2 border-gray-800 flex items-center justify-center text-[#44A076] shadow-xl flex-shrink-0">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-theme-card border-2 border-theme flex items-center justify-center text-[#44A076] shadow-xl flex-shrink-0">
                 <FontAwesomeIcon
                   icon={faBriefcase}
                   className="text-xl md:text-2xl"
@@ -51,7 +51,7 @@ const WorkExperience = () => {
               </div>
 
               {/* Company Name (Case as in data) */}
-              <h3 className="text-2xl md:text-5xl font-black text-white tracking-tight leading-none truncate">
+              <h3 className="text-2xl md:text-5xl font-black text-theme-primary tracking-tight leading-none truncate">
                 {exp.company}
               </h3>
             </div>
@@ -67,12 +67,12 @@ const WorkExperience = () => {
                 <span className="text-[#44A076] font-bold tracking-wider">
                   {exp.role}
                 </span>
-                <span className="text-gray-700 hidden md:inline">•</span>
-                <span className="text-gray-400 font-mono italic">
+                <span className="text-theme-secondary hidden md:inline">•</span>
+                <span className="text-theme-muted font-mono italic">
                   {exp.duration}
                 </span>
-                <span className="text-gray-700 hidden md:inline">|</span>
-                <span className="text-gray-400">{exp.location}</span>
+                <span className="text-theme-secondary hidden md:inline">|</span>
+                <span className="text-theme-muted">{exp.location}</span>
               </motion.div>
 
               {/* Sharp Gradient Divider */}
@@ -86,20 +86,20 @@ const WorkExperience = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="relative group bg-[#161D2C]/80 backdrop-blur-xl border border-gray-800/60 rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 hover:border-[#44A076]/30 hover:scale-[1.005] transition-all duration-500 shadow-2xl"
+                    className="relative group bg-theme-surf-alpha backdrop-blur-xl border border-theme rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 hover:border-[#44A076]/30 hover:scale-[1.005] transition-all duration-500 shadow-2xl"
                   >
                     {/* Subtle Border Glow (Hover) */}
                     <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2.5rem] bg-gradient-to-br from-[#44A076]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
                     {/* Precision Project Header */}
                     <div className="flex items-center gap-3 md:gap-5 mb-8 relative z-10">
-                      <div className="w-9 h-9 md:w-12 p-3 md:h-12 rounded-xl bg-[#10121B] border border-gray-800 flex items-center justify-center text-[#44A076] shadow-inner group-hover:scale-110 group-hover:bg-[#44A076] group-hover:text-white transition-all duration-500">
+                      <div className="w-9 h-9 md:w-12 p-3 md:h-12 rounded-xl bg-theme-primary border border-theme flex items-center justify-center text-[#44A076] shadow-inner group-hover:scale-110 group-hover:bg-[#44A076] dark:group-hover:text-white group-hover:text-black transition-all duration-500">
                         <FontAwesomeIcon
                           icon={getProjectIcon(pIdx)}
                           className="text-sm md:text-lg"
                         />
                       </div>
-                      <h4 className="text-[17px] md:text-2xl font-bold text-white tracking-tight leading-tight group-hover:text-[#44A076] transition-colors">
+                      <h4 className="text-[17px] md:text-2xl font-bold text-theme-primary tracking-tight leading-tight group-hover:text-[#44A076] transition-colors">
                         {project.name}
                       </h4>
                     </div>
@@ -109,7 +109,7 @@ const WorkExperience = () => {
                       {project.points.map((point, k) => (
                         <li
                           key={k}
-                          className="flex gap-4 items-start text-gray-400 group-hover:text-gray-300 transition-colors"
+                          className="flex gap-4 items-start text-theme-muted group-hover:text-theme-hover transition-all duration-300"
                         >
                           <div className="mt-[8px] md:mt-[10px] w-1.5 h-1.5 rounded-full bg-[#44A076]/40 group-hover:bg-[#44A076] transition-colors flex-shrink-0"></div>
                           <span className="text-[13.5px] md:text-[17px] leading-relaxed text-left flex-grow">
@@ -124,7 +124,7 @@ const WorkExperience = () => {
                       {project.tech.map((t, tIdx) => (
                         <span
                           key={tIdx}
-                          className="px-3.5 py-1.5 bg-[#10121B] text-[#44A076] text-[9.5px] md:text-[10.5px] font-bold uppercase tracking-widest rounded-lg border border-gray-800/80 group-hover:border-[#44A076]/20 transition-colors"
+                          className="px-3.5 py-1.5 bg-theme-primary text-[#44A076] text-[9.5px] md:text-[10.5px] font-bold uppercase tracking-widest rounded-lg border border-theme group-hover:border-[#44A076]/20 transition-colors"
                         >
                           {t}
                         </span>

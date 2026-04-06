@@ -5,6 +5,7 @@ import Home from "./components/Home/Home/Home";
 import Projects from "./components/Projects/Projects";
 import ProjectsDetails from "./components/ProjectsDetails/ProjectsDetails";
 import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,6 +18,7 @@ import Skills from "./components/Skills/Skills";
 
 function App() {
   return (
+    <ThemeProvider>
     <div className="App">
       <ScrollToTop />
       <Header></Header>
@@ -37,6 +39,7 @@ function App() {
 <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
+    </ThemeProvider>
   );
 }
 

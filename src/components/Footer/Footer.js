@@ -25,21 +25,25 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: faGithub, url: "https://github.com/shdhrubo", color: "#ffffff" },
+    {
+      icon: faGithub,
+      url: "https://github.com/shdhrubo",
+      hoverColor: "#44A076",
+    },
     {
       icon: faLinkedin,
       url: "https://linkedin.com/in/shorifulhabib",
-      color: "#0077B5",
+      hoverColor: "#0077B5",
     },
     {
       icon: faEnvelope,
       url: "mailto:shorifulhabib.iit@gmail.com",
-      color: "#EA4335",
+      hoverColor: "#EA4335",
     },
   ];
 
   return (
-    <footer className="bg-[#0B0D13] relative overflow-hidden pt-24 pb-12">
+    <footer className="bg-theme-nav relative overflow-hidden pt-24 pb-12">
       {/* Decorative Top Border Glow */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#44A076]/40 to-transparent"></div>
 
@@ -50,11 +54,11 @@ const Footer = () => {
             <div className="space-y-4">
               <Link
                 to="/"
-                className="text-3xl font-black text-white tracking-tighter"
+                className="text-3xl font-black text-theme-primary tracking-tighter"
               >
                 SHORIFUL<span className="text-[#44A076]">.</span>
               </Link>
-              <p className="text-gray-400 text-lg leading-relaxed font-medium">
+              <p className="text-theme-secondary text-lg leading-relaxed font-medium">
                 Full-Stack Software Engineer specializing in building scalable,
                 high-performance digital experiences. Crafting the future of web
                 technology with precision and passion.
@@ -65,9 +69,9 @@ const Footer = () => {
             <div className="space-y-4">
               <a
                 href="mailto:shorifulhabib.iit@gmail.com"
-                className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group"
+                className="flex items-center gap-4 text-theme-secondary hover:text-theme-hover transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#161D2C] border border-gray-800 flex items-center justify-center group-hover:border-[#44A076]/40 transition-all">
+                <div className="w-10 h-10 rounded-xl bg-theme-surface border border-theme flex items-center justify-center group-hover:border-[#44A076]/40 transition-all">
                   <FontAwesomeIcon icon={faEnvelope} className="text-sm" />
                 </div>
                 <span className="font-mono text-sm">
@@ -76,9 +80,9 @@ const Footer = () => {
               </a>
               <a
                 href="tel:+8801612939235"
-                className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group"
+                className="flex items-center gap-4 text-theme-secondary hover:text-theme-hover transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#161D2C] border border-gray-800 flex items-center justify-center group-hover:border-[#44A076]/40 transition-all">
+                <div className="w-10 h-10 rounded-xl bg-theme-surface border border-theme flex items-center justify-center group-hover:border-[#44A076]/40 transition-all">
                   <FontAwesomeIcon icon={faPhone} className="text-sm" />
                 </div>
                 <span className="font-mono text-sm">+880 1612-939235</span>
@@ -93,7 +97,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-400 hover:text-[#44A076] flex items-center gap-2 group transition-all"
+                    className="text-theme-secondary hover:text-theme-hover flex items-center gap-2 group transition-all"
                   >
                     <FontAwesomeIcon
                       icon={faArrowRight}
@@ -115,22 +119,26 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noreferrer"
-                  whileHover={{ y: -5 }}
-                  className="w-14 h-14 rounded-2xl bg-[#161D2C] border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#44A076]/40 hover:shadow-[0_10px_30px_-10px_rgba(68,160,118,0.3)] transition-all duration-300"
+                  whileHover={{
+                    y: -5,
+                    color: social.hoverColor,
+                    borderColor: social.hoverColor,
+                  }}
+                  className="w-14 h-14 rounded-2xl bg-theme-surface border border-theme flex items-center justify-center text-theme-muted transition-all duration-300"
                 >
                   <FontAwesomeIcon icon={social.icon} className="text-xl" />
                 </motion.a>
               ))}
             </div>
-            <p className="text-gray-500 text-sm font-medium leading-relaxed italic border-l-2 border-[#44A076]/30 pl-4">
+            <p className="text-theme-muted text-sm font-medium leading-relaxed italic border-l-2 border-[#44A076]/30 pl-4">
               "Code is the medium through which we architect the future."
             </p>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-gray-800/40 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-500 text-xs font-bold uppercase tracking-widest">
+        <div className="pt-12 border-t border-theme flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-theme-muted text-xs font-bold uppercase tracking-widest">
             © {year} <span className="text-[#44A076]">Shoriful Habib</span>
           </p>
         </div>

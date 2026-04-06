@@ -77,14 +77,14 @@ const skillVariants = {
 
 const Skills = () => {
   return (
-    <div className="bg-[#10121B] w-full py-20" id="skills">
+    <div className="bg-theme-primary w-full py-20" id="skills">
       <div className="max-w-[1200px] mx-auto w-full px-4 text-left">
         <div className="mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-theme-primary mb-4"
           >
             Professional <span className="text-[#44A076]">Skills</span>
           </motion.h2>
@@ -105,16 +105,16 @@ const Skills = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               whileHover={{ y: -8 }}
-              className="relative bg-[#1E2A3A]/40 backdrop-blur-lg p-8 rounded-xl border border-gray-800/80 hover:border-[#44A076]/80 transition-all duration-500 overflow-hidden shadow-2xl group"
+              className="relative bg-theme-sec-alpha backdrop-blur-lg p-8 rounded-xl border border-theme hover:border-[#44A076]/80 transition-all duration-500 overflow-hidden shadow-2xl group"
             >
               {/* Elegant continuous top highlight line */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#44A076] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 rounded-full bg-[#10121B] flex items-center justify-center text-[#44A076] text-xl shadow-[0_0_15px_rgba(68,160,118,0.1)] group-hover:shadow-[0_0_20px_rgba(68,160,118,0.4)] transition-shadow duration-500">
+                <div className="w-12 h-12 rounded-full bg-theme-primary flex items-center justify-center text-[#44A076] text-xl shadow-[0_0_15px_rgba(68,160,118,0.1)] group-hover:shadow-[0_0_20px_rgba(68,160,118,0.4)] transition-shadow duration-500">
                   <FontAwesomeIcon icon={group.icon} />
                 </div>
-                <h3 className="text-xl font-bold text-white tracking-widest uppercase text-sm">
+                <h3 className="text-xl font-bold text-theme-primary tracking-widest uppercase text-sm">
                   {group.category}
                 </h3>
               </div>
@@ -124,7 +124,7 @@ const Skills = () => {
                   <motion.div
                     variants={skillVariants}
                     key={i}
-                    className="px-4 py-2 bg-[#10121B]/80 text-gray-300 text-sm font-semibold rounded-md border border-gray-800 hover:border-[#44A076] hover:text-[#44A076] hover:shadow-[0_0_10px_rgba(68,160,118,0.2)] transition-all duration-300 cursor-default"
+                    className="px-4 py-2 bg-theme-surface text-theme-secondary text-sm font-semibold rounded-md border border-theme hover:border-[#44A076] hover:text-[#44A076] hover:shadow-[0_0_10px_rgba(68,160,118,0.2)] transition-all duration-300 cursor-default"
                   >
                     {skill}
                   </motion.div>

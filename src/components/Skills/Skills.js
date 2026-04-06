@@ -55,7 +55,7 @@ const Skills = () => {
 
   return (
     <div
-      className="min-h-screen bg-[#10121B] py-20 px-6 lg:px-20 relative overflow-hidden "
+      className="min-h-screen bg-theme-primary py-20 px-6 lg:px-20 relative overflow-hidden"
       id="skills"
     >
       {/* Background Glow */}
@@ -68,9 +68,9 @@ const Skills = () => {
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-theme-primary mb-4"
           >
-            Technical <span className="text-[#44A076]">Skills</span>
+            Professional <span className="text-[#44A076]">Skills</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
@@ -95,7 +95,7 @@ const Skills = () => {
               className="group relative"
             >
               {/* Simple Premium Card */}
-              <div className="h-44 md:h-52 bg-[#1A2235]/40 backdrop-blur-xl border border-gray-800/60 rounded-[8px] p-6 flex flex-col items-center justify-center gap-6 transition-all duration-300 group-hover:border-[#44A076]/30 group-hover:border-b-4 group-hover:border-b-[#44A076] group-hover:bg-[#1A2235]">
+              <div className="h-44 md:h-52 bg-theme-card-alpha backdrop-blur-xl border border-theme rounded-[8px] p-6 flex flex-col items-center justify-center gap-6 transition-all duration-300 group-hover:border-[#44A076]/30 group-hover:border-b-4 group-hover:border-b-[#44A076] group-hover:bg-theme-card">
                 {/* Icon Frame */}
                 <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center p-2 relative">
                   <div className="absolute inset-0 bg-[#44A076]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
@@ -107,7 +107,7 @@ const Skills = () => {
                 </div>
 
                 {/* Technology Name */}
-                <h3 className="text-sm md:text-base font-bold text-gray-400 group-hover:text-white uppercase tracking-widest transition-colors duration-300">
+                <h3 className="text-sm md:text-base font-bold text-theme-secondary group-hover:text-theme-primary uppercase tracking-widest transition-colors duration-300">
                   {skill.name}
                 </h3>
               </div>

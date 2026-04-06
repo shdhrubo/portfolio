@@ -18,14 +18,14 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-[#10121B] text-white min-h-screen pb-20 w-full overflow-hidden pt-20">
+    <div className="bg-theme-primary text-theme-primary min-h-screen pb-20 w-full overflow-hidden pt-20">
       <div className="max-w-[1200px] mx-auto w-full px-4">
         {/* Section Header */}
         <div className="text-left mb-16 pt-12">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-theme-primary mb-4"
           >
             About <span className="text-[#44A076]">Me</span>
           </motion.h2>
@@ -47,7 +47,7 @@ const About = () => {
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#44A076] to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative bg-[#1A2235] rounded-3xl overflow-hidden border border-gray-800">
+              <div className="relative bg-theme-card rounded-3xl overflow-hidden border border-theme">
                 <img
                   src={img}
                   alt="Shoriful Habib"
@@ -60,8 +60,8 @@ const About = () => {
                   </p>
 
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 text-gray-400 group/item">
-                      <div className="w-10 h-10 rounded-full bg-[#10121B] flex items-center justify-center text-[#44A076] group-hover/item:bg-[#44A076] group-hover/item:text-white transition-colors duration-300">
+                    <div className="flex items-center gap-3 text-theme-secondary group/item">
+                      <div className="w-10 h-10 rounded-full bg-theme-primary flex items-center justify-center text-[#44A076] group-hover/item:bg-[#44A076] dark:group-hover/item:text-white group-hover/item:text-black transition-colors duration-300">
                         <FontAwesomeIcon icon={faEnvelope} />
                       </div>
                       <a
@@ -71,16 +71,16 @@ const About = () => {
                         shorifulhabib.iit@gmail.com
                       </a>
                     </div>
-                    <div className="flex items-center gap-3 text-gray-400 group/item">
-                      <div className="w-10 h-10 rounded-full bg-[#10121B] flex items-center justify-center text-[#44A076] group-hover/item:bg-[#44A076] group-hover/item:text-white transition-colors duration-300">
+                    <div className="flex items-center gap-3 text-theme-secondary group/item">
+                      <div className="w-10 h-10 rounded-full bg-theme-primary flex items-center justify-center text-[#44A076] group-hover/item:bg-[#44A076] dark:group-hover/item:text-white group-hover/item:text-black transition-colors duration-300">
                         <FontAwesomeIcon icon={faPhone} />
                       </div>
                       <a href="tel:+8801612939235" className="text-sm">
                         +880 1612 939235
                       </a>
                     </div>
-                    <div className="flex items-center gap-3 text-gray-400 group/item">
-                      <div className="w-10 h-10 rounded-full bg-[#10121B] flex items-center justify-center text-[#44A076] group-hover/item:bg-[#44A076] group-hover/item:text-white transition-colors duration-300">
+                    <div className="flex items-center gap-3 text-theme-secondary group/item">
+                      <div className="w-10 h-10 rounded-full bg-theme-primary flex items-center justify-center text-[#44A076] group-hover/item:bg-[#44A076] dark:group-hover/item:text-white group-hover/item:text-black transition-colors duration-300">
                         <FontAwesomeIcon icon={faMapMarkerAlt} />
                       </div>
                       <span className="text-sm">
@@ -94,7 +94,7 @@ const About = () => {
                       href="https://www.linkedin.com/in/shorifulhabib/"
                       target="_blank"
                       rel="noreferrer"
-                      className="w-10 h-10 rounded-xl bg-[#10121B] flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300 shadow-md"
+                      className="w-10 h-10 rounded-xl bg-theme-primary flex items-center justify-center text-theme-muted hover:text-[#0077B5] transition-all duration-300 shadow-md"
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
@@ -102,7 +102,7 @@ const About = () => {
                       href="https://github.com/shdhrubo"
                       target="_blank"
                       rel="noreferrer"
-                      className="w-10 h-10 rounded-xl bg-[#10121B] flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-300 shadow-md"
+                      className="w-10 h-10 rounded-xl bg-theme-primary flex items-center justify-center text-theme-muted hover:text-[#44A076] transition-all duration-300 shadow-md"
                     >
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
@@ -124,13 +124,13 @@ const About = () => {
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 Professional Summary
               </h3>
-              <p className="text-left text-gray-400 text-lg leading-relaxed mb-6 italic">
+              <p className="text-left text-theme-secondary text-lg leading-relaxed mb-6 italic hover:text-theme-hover transition-colors">
                 Full-Stack Software Engineer with 2 years of experience in
                 building scalable applications using Angular, .NET, Node.js and
                 MongoDB. Skilled in AI and agent-assisted software development
                 and familiar with CQRS, Microservices, and DDD.
               </p>
-              <p className="text-left text-gray-400 text-lg leading-relaxed">
+              <p className="text-left text-theme-secondary text-lg leading-relaxed hover:text-theme-hover transition-colors">
                 I specialize in developing high-performance systems and
                 optimizing workflows. Currently, as a Software Engineer at{" "}
                 <strong>BRAC IT Services Limited</strong>, I design and develop
@@ -140,27 +140,27 @@ const About = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 bg-[#1E2A3A]/40 backdrop-blur-sm border border-gray-800 rounded-2xl hover:border-[#44A076]/30 transition-colors">
-                <h4 className="font-bold text-white mb-2">Education</h4>
+              <div className="p-6 bg-theme-sec-alpha backdrop-blur-sm border border-theme rounded-2xl hover:border-[#44A076]/30 transition-colors">
+                <h4 className="font-bold text-theme-primary mb-2">Education</h4>
                 <p className="text-sm text-[#44A076] font-semibold mb-1">
                   BSc. in Software Engineering
                 </p>
                 <p className="text-xs text-gray-500 mb-2">
                   Noakhali Science and Technology University
                 </p>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-theme-secondary">
                   CGPA: 3.57 / 4.00 (2020 – 2025)
                 </p>
               </div>
-              <div className="p-6 bg-[#1E2A3A]/40 backdrop-blur-sm border border-gray-800 rounded-2xl hover:border-[#44A076]/30 transition-colors">
-                <h4 className="font-bold text-white mb-2">Current Role</h4>
+              <div className="p-6 bg-theme-sec-alpha backdrop-blur-sm border border-theme rounded-2xl hover:border-[#44A076]/30 transition-colors">
+                <h4 className="font-bold text-theme-primary mb-2">Current Role</h4>
                 <p className="text-sm text-[#44A076] font-semibold mb-1">
                   Software Engineer
                 </p>
                 <p className="text-xs text-gray-500 mb-2">
                   BRAC IT Services Limited
                 </p>
-                <p className="text-sm text-gray-300">April 2024 – Present</p>
+                <p className="text-sm text-theme-secondary">April 2024 – Present</p>
               </div>
             </div>
 
@@ -174,7 +174,7 @@ const About = () => {
               </a>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A2235] border border-gray-700 hover:border-[#44A076] text-white font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-theme-card border border-theme hover:border-[#44A076] text-theme-primary font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <FontAwesomeIcon icon={faProjectDiagram} />
                 View Projects

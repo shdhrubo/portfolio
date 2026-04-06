@@ -1,6 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ========== THEME VARIABLES ========== */
+:root,
+html.dark {
+  --bg-primary: #10121B;
+  --bg-secondary: #1E2A3A;
+  --bg-card: #1A2235;
+  --bg-surface: #161D2C;
+  --bg-nav: #0B0D13;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-hover: #ffffff; /* Bright in Dark Mode */
+  --bg-hover: rgba(255, 255, 255, 0.15);
+  --border-color: rgba(75, 85, 99, 0.4);
+  --accent: #44A076;
+  --accent-hover: #358B63;
+}
+
+html.light {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-surface: #e8eef5;
+  --bg-nav: rgba(255, 255, 255, 0.85);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-hover: #44A076; /* Accent in Light Mode */
+  --bg-hover: rgba(68, 160, 118, 0.1);
+  --border-color: rgba(148, 163, 184, 0.3);
+  --accent: #2e8a64;
+  --accent-hover: #236b4d;
+}
+
+/* ========== SMOOTH THEME TRANSITION ========== */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ========== BASE BODY STYLES ========== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,9 +51,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* ========== THEME-AWARE UTILITY CLASSES ========== */
+.bg-theme-primary    { background-color: var(--bg-primary); }
+.bg-theme-secondary  { background-color: var(--bg-secondary); }
+.bg-theme-card       { background-color: var(--bg-card); }
+.bg-theme-surface    { background-color: var(--bg-surface); }
+.bg-theme-nav        { background-color: var(--bg-nav); }
+.text-theme-primary  { color: var(--text-primary); }
+.text-theme-secondary{ color: var(--text-secondary); }
+.text-theme-muted    { color: var(--text-muted); }
+.border-theme        { border-color: var(--border-color); }
+.text-theme-accent   { color: var(--accent); }
+.border-theme-accent { border-color: var(--accent); }
+.bg-theme-accent     { background-color: var(--accent); }
+.text-theme-hover    { color: var(--text-hover); }
+.bg-theme-hover      { background-color: var(--bg-hover); }
+.border-theme-hover  { border-color: var(--text-hover); }
+
+/* Alpha (semi-transparent) variants using color-mix */
+.bg-theme-card-alpha { background-color: color-mix(in srgb, var(--bg-card) 40%, transparent) !important; }
+.bg-theme-sec-alpha  { background-color: color-mix(in srgb, var(--bg-secondary) 40%, transparent) !important; }
+.bg-theme-card-60    { background-color: color-mix(in srgb, var(--bg-card) 60%, transparent) !important; }
+.bg-theme-surf-alpha { background-color: color-mix(in srgb, var(--bg-surface) 80%, transparent) !important; }
+.bg-theme-input      { background-color: var(--bg-primary) !important; color: var(--text-primary) !important; border-color: var(--border-color) !important; }
