@@ -5,7 +5,7 @@ import React from 'react';
 const Social = () => {
     return (
         <div>
-                 <div class="grid grid-flow-col gap-8">
+                 <div class="grid grid-flow-col gap-5">
               <a href="https://www.facebook.com/Dhrubo1290" className="text-[#44A076] text-xl ">
                 <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
               </a>

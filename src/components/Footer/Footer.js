@@ -17,8 +17,8 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="bg-[#1E2A3A]  pt-10">
-      <div className="bg-[#1E2A3A]  text-neutral-content">
+    <div className="bg-[#1E2A3A]  pt-10 w-full">
+      <div className="bg-[#1E2A3A] text-neutral-content max-w-[1200px] mx-auto w-full">
         <footer class="footer p-10 ">
           <div>
             <p className="text-xl text-[#44A076] font-bold">

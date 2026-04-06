@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const menuItems = (
     <>
       <li>
@@ -17,38 +27,43 @@ const Header = () => {
         <Link to={"/blogs"}>Blogs</Link>
       </li>
       <li>
-        <button className="btn capitalize  bg-[#44A076]">
-          {" "}
-          <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ">
+        <button 
+          className="btn capitalize border-none bg-gradient-to-r from-[#44A076] to-[#2E7A56] hover:from-[#358B63] hover:to-[#216142] text-white shadow-lg ml-2"
+        >
+          <a href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ" className="hover:text-white">
             Download Resume
           </a>
         </button>
       </li>
     </>
   );
+
   return (
-    <div class="navbar bg-[#1E2A3A] text-neutral-content sticky top-0 z-50">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
+    <div 
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#1E2A3A]/80 backdrop-blur-md shadow-xl' : 'bg-[#1E2A3A]'} text-neutral-content w-full flex justify-center`}
+    >
+      <div className="navbar max-w-[1200px] w-full mx-auto">
+        <div className="navbar-start">
+          <div className="dropdown">
+          <label tabIndex="0" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
           </label>
           <ul
-            tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#1E2A3A] rounded-box w-52 font-bold"
+            tabIndex="0"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#1E2A3A]/95 backdrop-blur-md rounded-box w-52 font-bold"
           >
             {menuItems}
           </ul>
@@ -60,10 +75,12 @@ const Header = () => {
           SHORIFUL
         </Link>
       </div>
-      <div class=" navbar-center  hidden lg:flex ">
-        <ul class="menu menu-horizontal p-0 font-bold">{menuItems}</ul>
+      <div className="navbar-end hidden lg:flex w-full">
+        <ul className="menu menu-horizontal p-0 font-bold items-center">
+          {menuItems}
+        </ul>
       </div>
-      <div class="navbar-end"></div>
+      </div>
     </div>
   );
 };
