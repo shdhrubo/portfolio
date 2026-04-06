@@ -68,7 +68,7 @@ const Banner = () => {
             className="flex flex-wrap gap-4 mt-8"
           >
             <a
-              href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ"
+              href="https://docs.google.com/uc?export=download&id=1jU_fXlAWohUmQ2srttwu37w9YHjOEA0j"
               target="_blank"
               rel="noreferrer"
             >

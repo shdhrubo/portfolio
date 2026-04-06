@@ -167,7 +167,7 @@ const About = () => {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="https://docs.google.com/uc?export=download&id=1d3bWAX8A7TUewZ07CLS3zmjSdU07yvtJ"
+                href="https://docs.google.com/uc?export=download&id=1jU_fXlAWohUmQ2srttwu37w9YHjOEA0j"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#44A076] to-[#2E7A56] hover:from-[#358B63] hover:to-[#216142] text-white font-bold rounded-xl shadow-[0_10px_20px_rgba(68,160,118,0.25)] transition-all duration-300 transform hover:-translate-y-1"
               >
                 <FontAwesomeIcon icon={faDownload} />
