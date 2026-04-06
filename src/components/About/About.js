@@ -51,7 +51,7 @@ const About = () => {
                 <img
                   src={img}
                   alt="Shoriful Habib"
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[530px] object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="p-8 text-center sm:text-left">
                   <h3 className="text-3xl font-bold mb-1">Shoriful Habib</h3>
@@ -153,14 +153,18 @@ const About = () => {
                 </p>
               </div>
               <div className="p-6 bg-theme-sec-alpha backdrop-blur-sm border border-theme rounded-2xl hover:border-[#44A076]/30 transition-colors">
-                <h4 className="font-bold text-theme-primary mb-2">Current Role</h4>
+                <h4 className="font-bold text-theme-primary mb-2">
+                  Current Role
+                </h4>
                 <p className="text-sm text-[#44A076] font-semibold mb-1">
                   Software Engineer
                 </p>
                 <p className="text-xs text-gray-500 mb-2">
                   BRAC IT Services Limited
                 </p>
-                <p className="text-sm text-theme-secondary">April 2024 – Present</p>
+                <p className="text-sm text-theme-secondary">
+                  April 2024 – Present
+                </p>
               </div>
             </div>
 

@@ -90,7 +90,7 @@ const Contacts = () => {
                     Phone
                   </h4>
                   <p className="text-theme-primary font-medium hover:text-[#44A076] transition-colors">
-                    +8801234567890
+                    +8801612939235
                   </p>
                 </div>
               </div>
