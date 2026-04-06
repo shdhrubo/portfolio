@@ -78,34 +78,20 @@ const skillVariants = {
 const Skills = () => {
   return (
     <div className="bg-[#10121B] w-full py-20" id="skills">
-      <div className="max-w-[1200px] mx-auto w-full px-4">
-        <div className="text-center mb-16">
-          <motion.h3
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-sm font-bold tracking-widest text-[#44A076] uppercase mb-2"
-          >
-            My Expertise
-          </motion.h3>
+      <div className="max-w-[1200px] mx-auto w-full px-4 text-left">
+        <div className="mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-white"
+            className="text-4xl md:text-5xl font-extrabold text-white mb-4"
           >
-            Professional{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#44A076] to-blue-500">
-              Skills
-            </span>
+            Professional <span className="text-[#44A076]">Skills</span>
           </motion.h2>
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="h-1 w-20 bg-[#44A076] mx-auto mt-6 rounded-full"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            className="h-1 w-16 bg-[#44A076] rounded-full origin-left"
           ></motion.div>
         </div>
 

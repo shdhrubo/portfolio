@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { localProjects } from "../../data/localProjects";
 
 const useProjects = () => {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    fetch("https://shdhrubo.onrender.com/projects")
-      .then((res) => res.json())
-      .then((data) => {
-        data.sort((a, b) => a.serial - b.serial);
-        setProjects(data);
-      });
-  }, []);
-  return [projects, setProjects];
+  const [projects] = useState(localProjects);
+  return [projects, () => {}];
 };
+
 export default useProjects;
