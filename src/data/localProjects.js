@@ -39,12 +39,13 @@ export const localProjects = [
     title: "Vita Care",
     img1: vc1,
     images: [vc1, vc2, vc3, vc4, vc5, vc6, vc7],
-    description: "Engineered a full-stack responsive healthcare appointment booking application. Designed RBAC and REST APIs with 14+ secured endpoints, and applied CQRS pattern with MediatR to separate read and write operations, improving overall system maintainability.",
+    description:
+      "Engineered a full-stack responsive healthcare appointment booking application. Designed RBAC and REST APIs with 14+ secured endpoints, and applied CQRS pattern with MediatR to separate read and write operations, improving overall system maintainability.",
     technologies: ["Angular", ".NET", "MongoDB", "CQRS", "MediatR"],
     tools: ["Angular", ".NET", "MongoDB", "CQRS", "MediatR"],
     frontEnd: "https://github.com/shdhrubo/vita-care",
     backEnd: "https://github.com/shdhrubo/vita-care",
-    live: "https://vita-care-portal.netlify.app/"
+    live: "https://vita-care-portal.netlify.app/",
   },
   {
     _id: "solver",
@@ -52,12 +53,13 @@ export const localProjects = [
     title: "Solver",
     img1: sv1,
     images: [sv1, sv2, sv3, sv4, sv5, sv6, sv7, sv8, sv9],
-    description: "Built a full-stack e-commerce platform integrating 17+ REST APIs, stock validation, and secure payment processing to ensure scalability. Enhanced UX by implementing a fully responsive UI across multiple devices.",
+    description:
+      "Built a full-stack e-commerce platform integrating 17+ REST APIs, stock validation, and secure payment processing to ensure scalability. Enhanced UX by implementing a fully responsive UI across multiple devices.",
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "Stripe"],
     tools: ["React", "Node.js", "Express.js", "MongoDB", "Stripe"],
     frontEnd: "https://github.com/shdhrubo/manufacturer-client",
     backEnd: "https://github.com/shdhrubo/manufacturer-client",
-    live: "https://manufacturer-website-1234.web.app/"
+    live: "https://manufacturer-website-1234.web.app/",
   },
   {
     _id: "eims",
@@ -65,12 +67,13 @@ export const localProjects = [
     title: "Easy Inventory Management System (EIMS)",
     img1: eims1,
     images: [eims1, eims2, eims3, eims4, eims5, eims6],
-    description: "Created a full-stack and responsive inventory system with secure authentication, validations, and complex database operations. Optimized the frontend with centralized API configurations and dynamic routing ensuring a smooth user experience.",
+    description:
+      "Created a full-stack and responsive inventory system with secure authentication, validations, and complex database operations. Optimized the frontend with centralized API configurations and dynamic routing ensuring a smooth user experience.",
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     tools: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     frontEnd: "https://github.com/shdhrubo/ware-house-cllient",
     backEnd: "https://github.com/shdhrubo/ware-house-cllient",
-    live: "https://easy-inventory-management-1234.web.app/"
+    live: "https://easy-inventory-management-1234.web.app/",
   },
   {
     _id: "codely",
@@ -78,11 +81,12 @@ export const localProjects = [
     title: "Codely",
     img1: cd1,
     images: [cd1, cd2, cd3, cd4, cd5, cd6, cd7, cd8],
-    description: "Developed a responsive landing page using Next.js with 20+ structured sections, focusing on performance, clean UI, and seamless user experience.",
+    description:
+      "Developed a responsive landing page using Next.js with 20+ structured sections, focusing on performance, clean UI, and seamless user experience.",
     technologies: ["Next.js", "Tailwind CSS"],
     tools: ["Next.js", "Tailwind CSS"],
     frontEnd: "https://github.com/shdhrubo/codely-landing-page",
     backEnd: "https://github.com/shdhrubo/codely-landing-page",
-    live: "https://codely-portal.netlify.app/"
-  }
+    live: "https://codely-portal.vercel.app/",
+  },
 ];
