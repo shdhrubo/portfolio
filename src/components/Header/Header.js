@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faXmark,
+  faSun,
+  faMoon,
+} from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -26,7 +31,7 @@ const Header = () => {
   ];
 
   const resumeUrl =
-    "https://docs.google.com/uc?export=download&id=1jU_fXlAWohUmQ2srttwu37w9YHjOEA0j";
+    "https://docs.google.com/uc?export=download&id=1TSWPVc0nmRfxbAgvHtf33ITyIKoF62Dg";
 
   return (
     <nav
@@ -39,14 +44,15 @@ const Header = () => {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
-
         {/* Brand Logo */}
         <Link
           to="/"
           className={`text-2xl md:text-3xl font-black tracking-tighter group transition-all ${isDark ? "text-white" : "text-gray-900"}`}
         >
           SHORIFUL
-          <span className="text-[#44A076] group-hover:pl-1 transition-all">.</span>
+          <span className="text-[#44A076] group-hover:pl-1 transition-all">
+            .
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -58,14 +64,20 @@ const Header = () => {
                   to={link.path}
                   className={`relative text-xs font-black uppercase tracking-[0.2em] transition-all group ${
                     location.pathname === link.path
-                      ? isDark ? "text-white" : "text-gray-900"
-                      : isDark ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-gray-900"
+                      ? isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                      : isDark
+                        ? "text-gray-400 hover:text-white"
+                        : "text-gray-500 hover:text-gray-900"
                   }`}
                 >
                   {link.name}
                   <span
                     className={`absolute -bottom-2 left-0 h-[2px] bg-[#44A076] transition-all duration-300 ${
-                      location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                      location.pathname === link.path
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
                     }`}
                   ></span>
                 </Link>
@@ -109,7 +121,9 @@ const Header = () => {
           <button
             onClick={toggleTheme}
             className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg transition-all ${
-              isDark ? "bg-gray-800 text-[#44A076]" : "bg-gray-100 text-yellow-500"
+              isDark
+                ? "bg-gray-800 text-[#44A076]"
+                : "bg-gray-100 text-yellow-500"
             }`}
           >
             <FontAwesomeIcon icon={isDark ? faMoon : faSun} />

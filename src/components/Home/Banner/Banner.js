@@ -54,11 +54,12 @@ const Banner = () => {
             With 2 years of experience building scalable applications, I
             specialize in{" "}
             <span className="text-[#44A076] font-medium">
-              Angular, .NET, Node.js, PostgreSQL and MongoDB
+              Angular, React, Next.js, .NET, Node.js, Express.js, PostgreSQL and
+              MongoDB
             </span>
-            . Dedicated to crafting high-performance systems and applying
-            AI-assisted development across modern architectures like CQRS and
-            Microservices.
+            . Dedicated to crafting high-performance systems and applying AI and
+            agent assisted software development across modern architectures like
+            CQRS, DDD and Microservices.
           </motion.p>
 
           <motion.div
@@ -68,7 +69,7 @@ const Banner = () => {
             className="flex flex-wrap gap-4 mt-8"
           >
             <a
-              href="https://docs.google.com/uc?export=download&id=1jU_fXlAWohUmQ2srttwu37w9YHjOEA0j"
+              href="https://docs.google.com/uc?export=download&id=1TSWPVc0nmRfxbAgvHtf33ITyIKoF62Dg"
               target="_blank"
               rel="noreferrer"
             >
