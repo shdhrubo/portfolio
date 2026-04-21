@@ -20,7 +20,17 @@ const skillsData = [
   {
     category: "Frameworks",
     icon: faLayerGroup,
-    skills: ["Angular", "React", "Express", ".NET", "Next.js"],
+    skills: [
+      "Angular",
+      "React",
+      "Express",
+      ".NET",
+      "Next.js",
+      "React Hook Form",
+      "Zod",
+      "Redux",
+      "RxJs",
+    ],
   },
   {
     category: "Databases",
