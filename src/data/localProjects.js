@@ -83,8 +83,8 @@ export const localProjects = [
     images: [cd1, cd2, cd3, cd4, cd5, cd6, cd7, cd8],
     description:
       "Developed a responsive landing page using Next.js with 20+ structured sections, focusing on performance, clean UI, and seamless user experience.",
-    technologies: ["Next.js", "Tailwind CSS"],
-    tools: ["Next.js", "Tailwind CSS"],
+    technologies: ["Next.js", "Tailwind CSS", "PostgreSQL"],
+    tools: ["Next.js", "Tailwind CSS", "PostgreSQL"],
     frontEnd: "https://github.com/shdhrubo/codely-landing-page",
     backEnd: "https://github.com/shdhrubo/codely-landing-page",
     live: "https://codely-portal.vercel.app/",
