@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import useProjects from "../hooks/useProjects";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faNpm } from "@fortawesome/free-brands-svg-icons";
 import {
   faExternalLinkAlt,
   faArrowLeft,
@@ -136,7 +136,7 @@ const ProjectsDetails = () => {
           >
             <div className="bg-theme-sec-alpha backdrop-blur-md border border-theme p-8 rounded-3xl shadow-xl">
               <h3 className="text-2xl font-bold mb-4">Project Overview</h3>
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+              <p className="text-theme-secondary text-sm md:text-base leading-relaxed mb-8">
                 {projectDetails.description}
               </p>
 
@@ -160,7 +160,7 @@ const ProjectsDetails = () => {
                 <h4 className="text-lg font-semibold text-[#44A076] mb-4">
                   Project Links
                 </h4>
-                <div className="flex w-full gap-4">
+                <div className="flex flex-wrap w-full gap-4">
                   {projectDetails.frontEnd &&
                     projectDetails.frontEnd !== "#" && (
                       <a
@@ -182,6 +182,17 @@ const ProjectsDetails = () => {
                     >
                       <FontAwesomeIcon icon={faExternalLinkAlt} />
                       Live Demo
+                    </a>
+                  )}
+                  {projectDetails.npm && projectDetails.npm !== "#" && (
+                    <a
+                      href={projectDetails.npm}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-3 border border-[#CB3837] text-[#CB3837] hover:bg-[#CB3837] hover:text-white rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm"
+                    >
+                      <FontAwesomeIcon icon={faNpm} className="text-lg" />
+                      npm Package
                     </a>
                   )}
                 </div>

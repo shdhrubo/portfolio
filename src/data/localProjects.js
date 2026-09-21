@@ -32,6 +32,11 @@ import cd6 from "../images/projects/codely/codely6.png";
 import cd7 from "../images/projects/codely/codely7.png";
 import cd8 from "../images/projects/codely/codely8.png";
 
+import nu1 from "../images/projects/nova-ui/nova-1.png";
+import nu2 from "../images/projects/nova-ui/nova-2.png";
+import nu3 from "../images/projects/nova-ui/nova-3.png";
+import nu4 from "../images/projects/nova-ui/nova-4.png";
+
 export const localProjects = [
   {
     _id: "vita-care",
@@ -88,5 +93,42 @@ export const localProjects = [
     frontEnd: "https://github.com/shdhrubo/codely-landing-page",
     backEnd: "https://github.com/shdhrubo/codely-landing-page",
     live: "https://codely-portal.vercel.app/",
+  },
+  {
+    _id: "nova-ui",
+    serial: "05",
+    title: "Nova UI",
+    img1: nu1,
+    images: [nu1, nu2, nu3, nu4],
+    tagline:
+      "Open-source, production-ready UI component library and design system built end-to-end with AI-assisted engineering.",
+    description:
+      "Open-source, production-ready UI component library and design system built end-to-end with AI-assisted software engineering. Designed, implemented, tested, published to npm, and deployed from scratch — using AI as a pair-programming assistant throughout the entire SDLC.",
+    highlights: [
+      { icon: "🎨", text: "Token-first design system — color, typography, spacing, shadow & radius tokens via TypeScript & CSS custom properties" },
+      { icon: "📐", text: "CSS Cascade Layers (@layer nova.*) — minimal specificity conflicts, easy consumer customization" },
+      { icon: "🌓", text: "Zero-JavaScript dark mode via data-nova-theme=\"dark\" attribute & CSS custom properties" },
+      { icon: "🧩", text: "16 Angular standalone components — Button, Input, Modal, Select, Tabs, Tooltip, and more" },
+      { icon: "♿", text: "WCAG 2.1 AA accessibility — keyboard nav, focus trapping, ARIA attributes, aria-live regions" },
+      { icon: "📦", text: "Nx monorepo — organized into reusable packages with a shared build graph" },
+      { icon: "🚀", text: "Automated CI/CD — independent docs deployment & npm publishing pipelines" },
+      { icon: "🏷️", text: "Automated release management — Changesets, semantic versioning, Git tags, GitHub Releases" },
+      { icon: "🌐", text: "Public npm distribution — packaged & published for developers to consume" },
+    ],
+    aiTable: [
+      { phase: "Requirements", work: "Component scope, design-system requirements, API contracts" },
+      { phase: "Architecture", work: "Monorepo structure, package boundaries, token architecture, CSS strategy" },
+      { phase: "Implementation", work: "Component development, reusable patterns, state management" },
+      { phase: "Accessibility", work: "Keyboard interaction, ARIA implementation, focus management" },
+      { phase: "Testing", work: "Test scenarios and edge cases" },
+      { phase: "DevOps", work: "GitHub Actions, artifact flow, release pipelines" },
+      { phase: "Release", work: "npm publishing, Changesets, semantic versioning, GitHub Releases" },
+    ],
+    technologies: ["Angular", "TypeScript", "CSS Custom Properties", "CSS Cascade Layers", "Nx", "GitHub Actions", "Vercel", "npm"],
+    tools: ["Angular", "TypeScript", "Nx", "GitHub Actions", "Vercel", "npm", "Changesets"],
+    frontEnd: "https://github.com/shdhrubo/nova-ui",
+    backEnd: "#",
+    live: "https://nova-ui-docs-tau.vercel.app/",
+    npm: "#",
   },
 ];
