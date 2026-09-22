@@ -1,41 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { localProjects } from "../../../data/localProjects";
 import { motion } from "framer-motion";
-import nu1 from "../../../images/projects/nova-ui/nova-1.png";
-
-const technologies = [
-  "Angular",
-  "TypeScript",
-  "CSS Custom Properties",
-  "CSS Cascade Layers",
-  "Nx",
-  "GitHub Actions",
-  "Vercel",
-  "npm",
-];
-
-const highlights = [
-  { icon: "🎨", text: "Token-first design system with CSS custom properties" },
-  { icon: "🧩", text: "16 Angular standalone UI components" },
-  { icon: "♿", text: "WCAG 2.1 AA accessible out of the box" },
-  { icon: "🚀", text: "Automated CI/CD & npm publishing pipeline" },
-  { icon: "🤖", text: "Built end-to-end with AI-assisted engineering" },
-];
 
 const NewAddition = () => {
+  const project = localProjects[localProjects.length - 1];
+  if (!project) return null;
+
   return (
-    <section className="bg-theme-surface w-full py-20 relative overflow-hidden">
-      {/* Subtle background glow */}
+    <section className="bg-theme-surface w-full py-32 relative overflow-hidden">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(68,160,118,0.08) 0%, transparent 70%)",
-        }}
+        className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(68,160,118,0.07) 0%, transparent 70%)" }}
       />
 
       <div className="max-w-[1200px] mx-auto w-full px-4">
+
         {/* Section Header */}
         <div className="text-left mb-12">
           <motion.div
@@ -45,7 +26,7 @@ const NewAddition = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#44A076]/40 bg-[#44A076]/10 mb-5"
           >
             <span className="text-sm font-semibold text-[#44A076] tracking-wide uppercase">
-              ✨ New Addition
+              New Addition
             </span>
           </motion.div>
 
@@ -68,92 +49,83 @@ const NewAddition = () => {
           />
         </div>
 
-        {/* Card */}
+        {/* Hero Card */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col lg:flex-row items-stretch bg-theme-sec-alpha backdrop-blur-sm border border-theme rounded-3xl overflow-hidden hover:border-[#44A076]/50 transition-all duration-500 shadow-2xl group"
+          transition={{ duration: 0.65 }}
+          className="group relative flex flex-col lg:flex-row w-full bg-theme-card border border-theme rounded-3xl overflow-hidden hover:border-[#44A076]/50 transition-all duration-500 shadow-[0_8px_40px_rgba(0,0,0,0.25)] hover:shadow-[0_16px_60px_rgba(68,160,118,0.18)]"
         >
-          {/* Left — Screenshot */}
-          <div className="lg:w-1/2 w-full h-64 lg:h-auto min-h-[320px] overflow-hidden relative">
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 group-hover:to-transparent transition-all duration-500 z-10 pointer-events-none" />
-            {/* "Open Source" ribbon */}
-            <div className="absolute top-5 left-5 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#44A076] text-white text-xs font-bold shadow-lg">
-              <span>🌐</span> Open Source
+          {/* Left: Screenshot */}
+          <div className="relative lg:w-1/2 w-full h-64 lg:h-auto min-h-[360px] overflow-hidden flex-shrink-0 bg-theme-secondary">
+            <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#44A076] text-white text-xs font-bold shadow-lg">
+              Open Source
             </div>
             <img
-              src={nu1}
-              alt="Nova UI component library preview"
+              src={project.img1}
+              alt={project.title}
               className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
             />
           </div>
 
-          {/* Right — Content */}
-          <div className="lg:w-1/2 w-full p-8 lg:p-12 text-left flex flex-col justify-center bg-theme-card-60 z-20">
-            {/* Title */}
-            <h3 className="text-3xl md:text-4xl font-extrabold text-theme-primary mb-2 group-hover:text-[#44A076] transition-colors duration-300">
-              Nova UI
-            </h3>
+          {/* Right: Content */}
+          <div className="flex flex-col justify-center flex-1 p-8 lg:p-12 gap-5">
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-extrabold text-theme-primary group-hover:text-[#44A076] transition-colors duration-300 leading-tight mb-2">
+                {project.title}
+              </h3>
+              {project.tagline && (
+                <p className="text-[#44A076] text-sm font-semibold italic border-l-2 border-[#44A076] pl-3 leading-snug">
+                  {project.tagline}
+                </p>
+              )}
+            </div>
 
-            {/* Tagline */}
-            <p className="text-[#44A076] text-sm font-semibold italic mb-5 border-l-2 border-[#44A076] pl-3 leading-snug">
-              Open-source, production-ready UI component library and design
-              system built end-to-end with AI-assisted engineering.
+            <p className="text-theme-secondary text-sm md:text-base leading-relaxed">
+              {project.description}
             </p>
 
-            {/* Description */}
-            <p className="text-theme-secondary text-sm md:text-base leading-relaxed mb-6">
-              Designed, implemented, tested, published to npm, and deployed from
-              scratch — using AI as a pair-programming assistant throughout the
-              entire software development lifecycle.
-            </p>
-
-            {/* Highlights */}
-            <ul className="flex flex-col gap-2 mb-6">
-              {highlights.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-2 text-sm text-theme-secondary"
-                >
-                  <span className="shrink-0">{item.icon}</span>
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-8">
-              {technologies.map((tech, i) => (
+            <div className="flex flex-wrap gap-2">
+              {project.technologies?.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1.5 bg-theme-primary text-[#44A076] text-xs font-semibold rounded-md border border-[#44A076]/30"
+                  className="px-3 py-1 text-[11px] font-semibold rounded-md border"
+                  style={{ background: "rgba(68,160,118,0.08)", borderColor: "rgba(68,160,118,0.25)", color: "#44A076" }}
                 >
                   {tech}
                 </span>
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 items-center">
-              <Link to="/projects/nova-ui">
-                <button className="px-8 py-3 bg-gradient-to-r from-[#44A076] to-[#2E7A56] hover:from-[#358B63] hover:to-[#216142] text-white font-semibold rounded-lg shadow-[0_10px_25px_rgba(68,160,118,0.3)] hover:shadow-[0_10px_35px_rgba(68,160,118,0.5)] transition-all duration-300">
-                  See Details →
+            <hr style={{ borderColor: "var(--border-color)", borderTopWidth: 1, margin: 0 }} />
+
+            <div className="flex flex-wrap gap-3">
+              <Link to={`/projects/${project._id}`}>
+                <button className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-[#44A076] text-white hover:bg-[#358B63] transition-all duration-300 shadow-[0_4px_20px_rgba(68,160,118,0.3)] hover:shadow-[0_6px_28px_rgba(68,160,118,0.5)]">
+                  View Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
                 </button>
               </Link>
               <a
-                href="https://nova-ui-docs-tau.vercel.app/"
+                href={project.live}
                 target="_blank"
                 rel="noreferrer"
-                className="px-8 py-3 bg-transparent border-2 border-theme hover:border-[#44A076] text-theme-secondary hover:text-[#44A076] font-semibold rounded-lg transition-all duration-300"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold border-2 border-[#44A076]/50 text-[#44A076] hover:border-[#44A076] hover:bg-[#44A076]/10 transition-all duration-300"
               >
-                Live Docs
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Live Demo
               </a>
             </div>
           </div>
+
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#44A076] scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center" />
         </motion.div>
+
       </div>
     </section>
   );

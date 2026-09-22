@@ -16,7 +16,7 @@ const Education = () => {
   ];
 
   return (
-    <div className="bg-theme-primary py-24 w-full" id="education">
+    <div className="bg-theme-primary py-32 w-full" id="education">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Section Title */}
         <div className="text-left mb-16">

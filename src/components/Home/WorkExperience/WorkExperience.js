@@ -15,7 +15,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <div className="bg-theme-primary py-24 w-full" id="experience">
+    <div className="bg-theme-primary py-32 w-full" id="experience">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Left-Aligned Section Title */}
         <div className="text-left mb-16">
@@ -51,7 +51,7 @@ const WorkExperience = () => {
               </div>
 
               {/* Company Name (Case as in data) */}
-              <h3 className="text-2xl md:text-5xl font-black text-theme-primary tracking-tight leading-none truncate">
+              <h3 className="text-2xl md:text-4xl font-black text-theme-primary tracking-tight leading-none truncate">
                 {exp.company}
               </h3>
             </div>
@@ -86,10 +86,10 @@ const WorkExperience = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="relative group bg-theme-surf-alpha backdrop-blur-xl border border-theme rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 hover:border-[#44A076]/30 hover:scale-[1.005] transition-all duration-500 shadow-2xl"
+                    className="relative group bg-theme-surf-alpha backdrop-blur-xl border border-theme rounded-xl md:rounded-2xl p-6 md:p-12 hover:border-[#44A076]/30 hover:scale-[1.005] transition-all duration-500 shadow-2xl"
                   >
                     {/* Subtle Border Glow (Hover) */}
-                    <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2.5rem] bg-gradient-to-br from-[#44A076]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                    <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#44A076]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
                     {/* Precision Project Header */}
                     <div className="flex items-center gap-3 md:gap-5 mb-8 relative z-10">

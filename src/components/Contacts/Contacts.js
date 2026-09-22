@@ -35,7 +35,7 @@ const Contacts = () => {
       );
   };
   return (
-    <div className="bg-theme-primary pb-24 w-full" id="contact">
+    <div className="bg-theme-primary pb-32 w-full" id="contact">
       <div className="max-w-[1200px] mx-auto w-full px-6">
         {/* Section Header */}
         <div className="text-left mb-16 pt-12">
